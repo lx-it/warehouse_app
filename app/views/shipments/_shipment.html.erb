@@ -3,9 +3,9 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(shipment.created_at) %> ago.
   </span>
-  <% if current_user?(micropost.user) %>
-    <%= link_to "delete", micropost, method: :delete,
+  <% if current_user?(shipment.user) %>
+    <%= link_to "delete", shipment, method: :delete,
                                      data: { confirm: "You sure?" },
-                                     title: micropost.content %>
+                                     title: shipment.content %>
   <% end %>
 </li>
